@@ -28,12 +28,15 @@ for i in range(len(x_data)):
         x_red.append(x_data[i])
         y_red.append(y_data[i])
 
-
+# plot points
 plt.scatter(x_red, y_red, s=10)
 plt.scatter(x_blue, y_blue, s=10)
 
-
+# plot separator line
 y1 = (-wts[0] - wts[1]*(1.0))/wts[2]
 y2 = (-wts[0] - wts[1]*(8.0))/wts[2]
 plt.plot ([1.0, 8.0], [y1, y2])
+plt.savefig("model_plot.png")
 plt.show()
+
+
